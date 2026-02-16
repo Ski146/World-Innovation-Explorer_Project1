@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Innovation Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/topojson.v3.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>🌍 World Innovation Explorer</h1>
+        <p class="subtitle">Exploring the intersection of Internet Adoption and Space Technology</p>
+        <p class="metadata">Data from Our World in Data | Internet (2023) | Space Objects (2023)</p>
+    </div>
+
+    <div class="container">
+        <!-- Top Row: Distributions -->
+        <div class="row">
+            <div class="chart-container" id="internet-dist"></div>
+            <div class="chart-container" id="space-dist"></div>
+        </div>
+
+        <!-- Middle Row: Scatter Plot -->
+        <div class="row">
+            <div class="chart-container wide" id="scatter-plot"></div>
+        </div>
+
+        <!-- Bottom Row: Choropleth Maps -->
+        <div class="row">
+            <div class="chart-container map-container" id="internet-map"></div>
+            <div class="chart-container map-container" id="space-map"></div>
+        </div>
+
+        <!-- Tooltip -->
+        <div class="tooltip" id="tooltip"></div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/visualizations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

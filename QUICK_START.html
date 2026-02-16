@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start Guide - World Innovation Explorer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4A90E2;
+            border-bottom: 3px solid #4A90E2;
+            padding-bottom: 1rem;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 2rem;
+        }
+        code {
+            background: #f0f0f0;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+        .file-tree {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-left: 4px solid #4A90E2;
+            margin: 1rem 0;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        .step {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            border-left: 4px solid #4A90E2;
+        }
+        .success {
+            background: #e8f5e9;
+            border-left-color: #4caf50;
+        }
+        button {
+            background: #4A90E2;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 1rem 0;
+        }
+        button:hover {
+            background: #2E6BC9;
+        }
+        .note {
+            background: #fff3cd;
+            border-left-color: #ffc107;
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid #ffc107;
+            margin: 1rem 0;
+        }
+        ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Quick Start Guide - World Innovation Explorer</h1>
+
+        <h2>✅ What You Have</h2>
+        <p>A complete, Level 1 & 2 data visualization project with:</p>
+        <ul>
+            <li>Modern, aesthetic web application</li>
+            <li>5 interactive visualizations (distributions, scatter, choropleth maps)</li>
+            <li>200+ countries of data on internet adoption and space technology</li>
+            <li>Responsive design with professional color schemes</li>
+            <li>No external dependencies except D3.js (loaded via CDN)</li>
+        </ul>
+
+        <h2>📁 Project Structure</h2>
+        <div class="file-tree">
+world-innovation-explorer/
+├── index.html                 (Main application - OPEN THIS!)
+├── README.md                  (Project documentation)
+├── .gitignore                 (Git configuration)
+├── css/
+│   └── style.css             (All styling - modern & responsive)
+├── js/
+│   ├── main.js               (Loads data & creates visualizations)
+│   ├── data.js               (200+ countries data)
+│   ├── visualizations.js     (D3 visualization code)
+│   └── utils.js              (Helper functions)
+└── QUICK_START.html          (This file)
+        </div>
+
+        <h2>🏃 How to Run (3 Steps)</h2>
+
+        <div class="step">
+            <strong>Step 1:</strong> Navigate to the folder
+            <pre>cd path/to/world-innovation-explorer</pre>
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong> Open index.html with a local server
+            <pre># Option A: Using Python 3
+python -m http.server 8000
+
+# Option B: Using Python 2
+python -m SimpleHTTPServer 8000
+
+# Option C: Using Node.js (if installed)
+npx http-server</pre>
+        </div>
+
+        <div class="step success">
+            <strong>Step 3:</strong> Open in your browser
+            <pre>http://localhost:8000</pre>
+            <p>You should see a beautiful dashboard with 5 interactive visualizations!</p>
+        </div>
+
+        <div class="note">
+            <strong>💡 Tip:</strong> The easiest way in VS Code is to:
+            <ol>
+                <li>Install the "Live Server" extension (5M+ downloads)</li>
+                <li>Right-click index.html → "Open with Live Server"</li>
+                <li>Done! Your browser opens automatically</li>
+            </ol>
+        </div>
+
+        <h2>📊 What Each Visualization Shows</h2>
+
+        <h3>1. Internet Usage Distribution 🌐</h3>
+        <p>A histogram showing how many countries fall into each internet usage percentage range. Hover over bars to see the exact counts.</p>
+
+        <h3>2. Space Objects Distribution 🚀</h3>
+        <p>Top 25 countries ranked by number of space objects they've launched. Shows which nations are space leaders.</p>
+
+        <h3>3. Correlation Scatter Plot 📊</h3>
+        <p>Each dot is a country. X-axis is internet usage, Y-axis is space objects. Hover over dots to see country details and identify patterns.</p>
+
+        <h3>4. Internet Usage Map 🗺️</h3>
+        <p>World map colored by internet penetration. Blue areas = high internet usage. Gray areas = no data or low usage.</p>
+
+        <h3>5. Space Objects Map 🚀</h3>
+        <p>World map colored by space launch activity. Red areas = countries that have launched many objects into space.</p>
+
+        <h2>🎨 Design Features</h2>
+        <ul>
+            <li><strong>Modern Gradient Header:</strong> Blue-to-red gradient representing innovation spectrum</li>
+            <li><strong>Dashboard Layout:</strong> All visualizations visible without scrolling (on 1400px+ displays)</li>
+            <li><strong>Hover Interactions:</strong> Detailed tooltips appear when you hover</li>
+            <li><strong>Color Accessibility:</strong> Uses ColorBrewer principles for color-blind friendly visualization</li>
+            <li><strong>Responsive Design:</strong> Works on tablets and phones (single column)</li>
+        </ul>
+
+        <h2>📝 Data Information</h2>
+        <ul>
+            <li><strong>Internet Data:</strong> 200+ countries, 2023 (latest available)</li>
+            <li><strong>Space Data:</strong> Countries that have launched objects, all-time through 2023</li>
+            <li><strong>Source:</strong> Our World in Data (ourworldindata.org)</li>
+            <li><strong>GeoJSON:</strong> Auto-loaded from GitHub CDN</li>
+        </ul>
+
+        <h2>🔧 Customization</h2>
+
+        <h3>Change Data (Optional)</h3>
+        <p>Edit <code>js/data.js</code> to modify the countries array. Each country needs:</p>
+        <pre>{
+    code: "USA",           // ISO country code
+    name: "United States",
+    internet: 90.0,        // Percentage (0-100)
+    space: 210             // Number of objects
+}</pre>
+
+        <h3>Change Colors (Optional)</h3>
+        <p>Edit the CSS variables at the top of <code>css/style.css</code>:</p>
+        <pre>:root {
+    --primary-internet: #4A90E2;   /* Blue */
+    --primary-space: #E74C3C;       /* Red */
+    --accent-1: #2ECC71;            /* Green */
+    --accent-2: #F39C12;            /* Orange */
+    /* ... more colors ... */
+}</pre>
+
+        <h2>📤 Next Steps (For Submission)</h2>
+
+        <h3>To Deploy Online (Recommended):</h3>
+        <ol>
+            <li>Push this folder to GitHub</li>
+            <li>Deploy to Vercel:
+                <pre>npm install -g vercel
+vercel</pre>
+            </li>
+            <li>Or use GitHub Pages for free hosting</li>
+        </ol>
+
+        <h3>To Extend to Level 3+:</h3>
+        <ul>
+            <li><strong>Level 3:</strong> Add attribute selector dropdowns in <code>index.html</code> to choose different datasets</li>
+            <li><strong>Level 4:</strong> Add more detailed tooltips with country information</li>
+            <li><strong>Level 5:</strong> Add brushing and linking - when you select points/areas in one chart, highlight them across all charts</li>
+        </ul>
+
+        <h2>🐛 Troubleshooting</h2>
+
+        <div class="note">
+            <strong>Problem: Blank page when opening index.html</strong>
+            <ul>
+                <li>❌ Don't just double-click the file</li>
+                <li>✅ Use a local server (see "How to Run" above)</li>
+                <li>Reason: D3 and GeoJSON need to be served over HTTP</li>
+            </ul>
+        </div>
+
+        <div class="note">
+            <strong>Problem: Visualizations not loading</strong>
+            <ul>
+                <li>Check browser console for errors (F12 → Console tab)</li>
+                <li>Ensure you're on http://localhost:___ (not file://)</li>
+                <li>Try a different browser</li>
+            </ul>
+        </div>
+
+        <h2>📞 Support</h2>
+        <p>If you have issues:</p>
+        <ol>
+            <li>Check the browser console (F12 → Console tab)</li>
+            <li>Read the comments in the JavaScript files</li>
+            <li>Check D3.js documentation: https://d3js.org</li>
+        </ol>
+
+        <h2>✨ You're All Set!</h2>
+        <p>This project meets Level 1 & 2 requirements completely. The code is clean, well-commented, and ready for expansion.</p>
+        
+        <button onclick="location.href='index.html'">👉 Open the Application →</button>
+
+        <hr style="margin: 2rem 0; border: none; border-top: 2px solid #eee;">
+        <p style="text-align: center; color: #999; font-size: 0.9rem;">
+            Created with D3.js | Data from Our World in Data | Last Updated: Feb 16, 2026
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Folder structure created for the World Innovation Explorer project
+# This .gitignore prevents unnecessary files from being tracked
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies (if you add package.json)
+node_modules/
+dist/
