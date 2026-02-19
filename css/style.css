@@ -56,9 +56,206 @@ body {
 
 /* Container & Layout */
 .container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 2rem auto;
     padding: 0 1rem;
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--neutral-dark);
+    margin: 2rem 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--primary-internet);
+    letter-spacing: 0.5px;
+}
+
+.row.full-width {
+    display: block;
+}
+
+/* Interactive Controls */
+.controls-panel {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.control-group {
+    flex: 1;
+    min-width: 300px;
+}
+
+.control-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--neutral-dark);
+    font-size: 0.95rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    padding: 0.6rem 1rem;
+    border: 2px solid #e0e0e0;
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: var(--neutral-dark);
+}
+
+.control-btn:hover {
+    border-color: var(--primary-internet);
+    background: #f0f7ff;
+    transform: translateY(-2px);
+}
+
+.control-btn.active {
+    background: var(--primary-internet);
+    color: white;
+    border-color: var(--primary-internet);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+/* Stats Panel */
+.stats-panel {
+    display: flex;
+    gap: 1rem;
+    background: linear-gradient(135deg, #f0f7ff 0%, #fff0f5 100%);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+}
+
+.stat-label {, filter 0.2s ease;
+    cursor: pointer;
+}
+
+.bar:hover {
+    fill: #2E6BC9;
+    opacity: 0.9;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.bar.space {
+    fill: var(--primary-space);
+}
+
+.bar.space:hover {
+    fill: #D43F31;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.bar.highlighted {
+    filter: drop-shadow(0 6px 12px rgba(74, 144, 226, 0.5));
+    stroke: var(--primary-internet);
+    stroke-width: 2;
+}
+
+.bar.faded {
+    opacity: 0.2
+/* Info Panel */
+.info-panel {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 280px;
+    animation: slideIn 0.3s ease;
+    border-left: 4px solid var(--primary-internet);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.75rem;
+}
+
+.info-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--neutral-dark);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.info-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--neutral-dark);
+}
+
+.info-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-internet);
 }
 
 .row {
@@ -73,7 +270,12 @@ body {
     border-radius: 12px;
     padding: 2rem;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 550px;
+}
+
+.chart-container svg {
+    width: 100%;
+    height: autoform 0.3s ease, box-shadow 0.3s ease;
     min-height: 500px;
 }
 
@@ -88,14 +290,9 @@ body {
 }
 
 .chart-container.map-container {
-    min-height: 600px;
-}
-
-/* Chart Titles */
-.chart-title {
-    font-size: 1.4rem;
+    min-height: 62rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--neutral-dark);
     border-bottom: 3px solid var(--primary-internet);
     padding-bottom: 0.5rem;
@@ -147,12 +344,23 @@ svg {
 .bar.space {
     fill: var(--primary-space);
 }
-
-.bar.space:hover {
-    fill: #D43F31;
+, filter 0.2s ease;
 }
 
-/* Scatter Plot Styles */
+.dot:hover {
+    opacity: 1;
+    r: 7;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.dot.highlighted {
+    r: 9;
+    filter: drop-shadow(0 6px 12px rgba(74, 144, 226, 0.6));
+    stroke-width: 3px;
+}
+
+.dot.faded {
+    opacity: 0.1er Plot Styles */
 .dot {
     fill: var(--primary-internet);
     stroke: white;
@@ -175,25 +383,37 @@ svg {
     transition: opacity 0.2s ease;
 }
 
-.dot:hover ~ .dot-label,
-.dot-label:hover {
-    opacity: 1;
-}
-
-/* Map Styles */
-.country {
-    fill: #E8E8E8;
-    stroke: white;
-    stroke-width: 0.5px;
-    cursor: pointer;
-    transition: fill 0.2s ease, opacity 0.2s ease;
+.dot:hover ~ .dot-label,, filter 0.2s ease;
 }
 
 .country:hover {
     opacity: 0.8;
     stroke-width: 1.5px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
 }
 
+.country.internet {
+    fill: var(--primary-internet);
+}
+
+.country.space {
+    fill: var(--primary-space);
+}
+
+.country.no-data {
+    fill: #F5F5F5;
+    opacity: 0.5;
+}
+
+.country.highlighted {
+    paint-order: stroke;
+    stroke: #333;
+    stroke-width: 2.5px;
+    filter: drop-shadow(0 6px 12px rgba(74, 144, 226, 0.5));
+}
+
+.country.faded {
+    opacity: 0.1
 .country.internet {
     fill: var(--primary-internet);
 }
@@ -261,6 +481,18 @@ svg {
 }
 
 /* Responsive Design */
+
+    .controls-panel {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-panel {
+        right: 10px;
+        left: 10px;
+        top: auto;
+        bottom: 20px;
+    }
 @media (max-width: 1200px) {
     .header h1 {
         font-size: 2rem;

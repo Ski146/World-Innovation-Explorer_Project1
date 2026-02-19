@@ -16,21 +16,65 @@
     </div>
 
     <div class="container">
-        <!-- Top Row: Distributions -->
+        <!-- Interactive Controls -->
+        <div class="controls-panel">
+            <div class="control-group">
+                <label>🌐 Filter by Internet Adoption:</label>
+                <div class="button-group">
+                    <button class="control-btn active" data-filter="all">All Countries</button>
+                    <button class="control-btn" data-filter="low">Low (0-33%)</button>
+                    <button class="control-btn" data-filter="medium">Medium (34-66%)</button>
+                    <button class="control-btn" data-filter="high">High (67-100%)</button>
+                </div>
+            </div>
+            <div class="stats-panel">
+                <div class="stat-item"><span class="stat-label">Countries:</span> <span class="stat-value" id="stat-countries">200</span></div>
+                <div class="stat-item"><span class="stat-label">Avg Internet:</span> <span class="stat-value" id="stat-internet">58%</span></div>
+                <div class="stat-item"><span class="stat-label">Space Active:</span> <span class="stat-value" id="stat-space">45</span></div>
+                <div class="stat-item"><span class="stat-label">Selected:</span> <span class="stat-value" id="stat-selected">None</span></div>
+            </div>
+        </div>
+
+        <!-- Distribution Charts Row -->
+        <div class="section-title">📊 Data Distribution</div>
         <div class="row">
             <div class="chart-container" id="internet-dist"></div>
             <div class="chart-container" id="space-dist"></div>
         </div>
 
-        <!-- Middle Row: Scatter Plot -->
-        <div class="row">
+        <!-- Scatter Plot Row -->
+        <div class="section-title">🔗 Correlation Analysis</div>
+        <div class="row full-width">
             <div class="chart-container wide" id="scatter-plot"></div>
         </div>
 
-        <!-- Bottom Row: Choropleth Maps -->
+        <!-- Maps Row -->
+        <div class="section-title">🗺️ Global Distribution</div>
         <div class="row">
             <div class="chart-container map-container" id="internet-map"></div>
             <div class="chart-container map-container" id="space-map"></div>
+        </div>
+
+        <!-- Country Info Panel -->
+        <div class="info-panel" id="info-panel" style="display: none;">
+            <div class="info-header">
+                <h3 id="info-country-name">Country Name</h3>
+                <button class="close-btn" onclick="closeInfoPanel()">✕</button>
+            </div>
+            <div class="info-content">
+                <div class="info-stat">
+                    <span class="info-label">Internet Usage:</span>
+                    <span class="info-value" id="info-internet">0%</span>
+                </div>
+                <div class="info-stat">
+                    <span class="info-label">Space Objects:</span>
+                    <span class="info-value" id="info-space">0</span>
+                </div>
+                <div class="info-stat">
+                    <span class="info-label">Country Code:</span>
+                    <span class="info-value" id="info-code">--</span>
+                </div>
+            </div>
         </div>
 
         <!-- Tooltip -->
@@ -39,6 +83,7 @@
 
     <script src="js/data.js"></script>
     <script src="js/utils.js"></script>
+    <script src="js/interactions.js"></script>
     <script src="js/visualizations.js"></script>
     <script src="js/main.js"></script>
 </body>
