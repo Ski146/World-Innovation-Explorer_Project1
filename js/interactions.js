@@ -54,22 +54,26 @@ const INTERACTIONS = {
             return true;
         });
 
-        // Apply visual filtering
-        d3.selectAll('.dot')
-            .classed('faded', d => !filteredCountries.find(c => c.name === d.name));
+        // Apply visual filtering to dots
+        d3.selectAll('circle.dot')
+            .classed('faded', d => !filteredCountries.find(c => c.name === d.name))
+            .classed('highlighted', false);
 
-        d3.selectAll('.bar')
+        // Apply visual filtering to bars
+        d3.selectAll('rect.bar')
             .classed('faded', function(d) {
-                // For distributions, check if the data point is in filtered list
-                const dataLabel = d3.select(this.parentNode).datum()?.name || d.x0;
-                return filteredCountries.length > 0 && 
-                       !filteredCountries.find(c => c.name === dataLabel);
-            });
+                if (d.name) return !filteredCountries.find(c => c.name === d.name);
+                return false;
+            })
+            .classed('highlighted', false);
 
-        d3.selectAll('.country')
-            .classed('faded', d => 
-                !filteredCountries.find(c => c.code === (d.properties.id || d.properties.code))
-            );
+        // Apply visual filtering to map countries
+        d3.selectAll('path.country')
+            .classed('faded', d => {
+                const code = d.properties.id || d.properties.code;
+                return !filteredCountries.find(c => c.code === code);
+            })
+            .classed('highlighted', false);
     },
 
     /**

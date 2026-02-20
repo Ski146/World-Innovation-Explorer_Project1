@@ -19,6 +19,26 @@
 
         // Merge country data with GeoJSON
         const mergedGeoData = UTILS.mergeGeoDataWithCountries(worldGeoData, DATA.countries);
+        
+        // Debug: Check merged data
+        const countriesWithData = mergedGeoData.features.filter(f => f.properties.internet !== undefined).length;
+        console.log(`Debug: ${countriesWithData}/${mergedGeoData.features.length} countries have internet data`);
+        
+        // Display debug info on page
+        const debugInfo = document.createElement('div');
+        debugInfo.style.cssText = 'position: fixed; top: 10px; right: 10px; background: white; border: 2px solid #4A90E2; padding: 10px; z-index: 9999; max-width: 300px; font-family: monospace; font-size: 11px; max-height: 200px; overflow: auto;';
+        debugInfo.innerHTML = `<strong>Debug Info:</strong><br>Features with internet data: ${countriesWithData}/${mergedGeoData.features.length}`;
+        document.body.appendChild(debugInfo);
+        
+        if (countriesWithData < 50) {
+            console.warn('Low merge success rate. Sample features:');
+            for (let i = 0; i < Math.min(5, mergedGeoData.features.length); i++) {
+                const f = mergedGeoData.features[i];
+                const debugLine = `Feature ${i}: id=${f.properties.id || f.id}, internet=${f.properties.internet}`;
+                debugInfo.innerHTML += `<br>${debugLine}`;
+                console.log(debugLine);
+            }
+        }
 
         console.log('Creating visualizations...');
 

@@ -50,6 +50,7 @@ const VIZ = {
             .attr('height', d => height - yScale(d.length))
             .attr('fill', '#4A90E2')
             .attr('stroke', '#2E5E8B')
+            .style('cursor', 'pointer')
             .on('mouseover', function(event, d) {
                 d3.select(this).attr('fill', '#357ABD');
                 const content = `
@@ -61,6 +62,12 @@ const VIZ = {
             .on('mouseout', function() {
                 d3.select(this).attr('fill', '#4A90E2');
                 UTILS.hideTooltip();
+            })
+            .on('click', function(event, d) {
+                if (d.length > 0) {
+                    const country = d[0].name ? d[0] : DATA.countries.find(c => c.internet >= d.x0 && c.internet < d.x1);
+                    if (country) INTERACTIONS.selectCountry(country.name, country.internet, country.space, country.code);
+                }
             });
 
         // X Axis
@@ -135,17 +142,22 @@ const VIZ = {
             .attr('height', d => height - yScale(d.space))
             .attr('fill', '#E74C3C')
             .attr('stroke', '#C0392B')
+            .style('cursor', 'pointer')
             .on('mouseover', function(event, d) {
                 d3.select(this).attr('fill', '#D43C2E');
                 const content = `
                     <div class="tooltip-title">${d.name}</div>
                     <div class="tooltip-line">Objects: ${d.space}</div>
+                    <div class="tooltip-line">Click for details</div>
                 `;
                 UTILS.showTooltip(event, content);
             })
             .on('mouseout', function() {
                 d3.select(this).attr('fill', '#E74C3C');
                 UTILS.hideTooltip();
+            })
+            .on('click', function(event, d) {
+                INTERACTIONS.selectCountry(d.name, d.internet, d.space, d.code);
             });
 
         // X Axis (country names)
@@ -213,6 +225,7 @@ const VIZ = {
             .attr('fill', '#4A90E2')
             .attr('stroke', '#2E5E8B')
             .attr('opacity', 0.7)
+            .style('cursor', 'pointer')
             .on('mouseover', function(event, d) {
                 d3.select(this)
                     .attr('r', 7)
@@ -229,6 +242,9 @@ const VIZ = {
                     .attr('r', 4)
                     .attr('fill', '#4A90E2');
                 UTILS.hideTooltip();
+            })
+            .on('click', function(event, d) {
+                INTERACTIONS.selectCountry(d.name, d.internet, d.space, d.code);
             });
 
         // X Axis
