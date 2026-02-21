@@ -34,42 +34,9 @@
                 <div class="stat-item"><span class="stat-label">Selected:</span> <span class="stat-value" id="stat-selected">None</span></div>
             </div>
         </div>
-
-        <!-- Distribution Charts Row -->
-        <div class="section-title">📊 Data Distribution</div>
-        <div class="row">
-            <div class="chart-container" id="internet-dist"></div>
-            <div class="chart-container" id="space-dist"></div>
-        </div>
-
-        <!-- Scatter Plot Row -->
-        <div class="section-title">🔗 Correlation Analysis</div>
-        <div class="row full-width">
-            <div class="chart-container wide" id="scatter-plot"></div>
-        </div>
-
-        <!-- Maps Row -->
-        <div class="section-title">🗺️ Global Distribution</div>
-        <div class="row">
-            <div class="chart-container map-container" id="internet-map"></div>
-            <div class="chart-container map-container" id="space-map"></div>
-        </div>
-
-        <!-- Level 4: Time-Series Animation -->
-        <div class="section-title">⏱️ Level 4: Technology Trends (2010-2024)</div>
-        <div class="timeline-controls">
-            <button id="play-btn" class="timeline-btn">▶ Play</button>
-            <button id="pause-btn" class="timeline-btn" style="display: none;">⏸ Pause</button>
-            <span class="timeline-label">Year: <strong id="year-display">2024</strong></span>
-            <input type="range" id="year-slider" min="2010" max="2024" value="2024" class="timeline-slider">
-        </div>
-        <div class="row">
-            <div class="chart-container" id="timeseries-internet"></div>
-            <div class="chart-container" id="timeseries-space"></div>
-        </div>
-
+        
         <!-- Level 4: Multi-Country Comparison -->
-        <div class="section-title">🤝 Level 4: Compare Multiple Countries</div>
+        <div class="section-title"> Compare Multiple Countries</div>
         <div class="comparison-controls">
             <input type="text" id="search-countries" placeholder="Search countries to compare..." class="search-input">
             <button id="reset-comparison" class="control-btn">Reset Comparison</button>
@@ -100,6 +67,39 @@
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <!-- Distribution Charts Row -->
+        <div class="section-title"> Data Distribution</div>
+        <div class="row">
+            <div class="chart-container" id="internet-dist"></div>
+            <div class="chart-container" id="space-dist"></div>
+        </div>
+
+        <!-- Scatter Plot Row -->
+        <div class="section-title"> Correlation Analysis</div>
+        <div class="row full-width">
+            <div class="chart-container wide" id="scatter-plot"></div>
+        </div>
+
+        <!-- Maps Row -->
+        <div class="section-title"> Global Distribution</div>
+        <div class="row">
+            <div class="chart-container map-container" id="internet-map"></div>
+            <div class="chart-container map-container" id="space-map"></div>
+        </div>
+
+        <!-- Level 4: Time-Series Animation -->
+        <div class="section-title"> Technology Trends (2010-2024)</div>
+        <div class="timeline-controls">
+            <button id="play-btn" class="timeline-btn">▶ Play</button>
+            <button id="pause-btn" class="timeline-btn" style="display: none;">⏸ Pause</button>
+            <span class="timeline-label">Year: <strong id="year-display">2024</strong></span>
+            <input type="range" id="year-slider" min="2010" max="2024" value="2024" class="timeline-slider">
+        </div>
+        <div class="row">
+            <div class="chart-container" id="timeseries-internet"></div>
+            <div class="chart-container" id="timeseries-space"></div>
         </div>
 
         <!-- Tooltip -->
