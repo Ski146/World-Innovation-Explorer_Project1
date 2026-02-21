@@ -55,6 +55,33 @@
             <div class="chart-container map-container" id="space-map"></div>
         </div>
 
+        <!-- Level 4: Time-Series Animation -->
+        <div class="section-title">⏱️ Level 4: Technology Trends (2010-2024)</div>
+        <div class="timeline-controls">
+            <button id="play-btn" class="timeline-btn">▶ Play</button>
+            <button id="pause-btn" class="timeline-btn" style="display: none;">⏸ Pause</button>
+            <span class="timeline-label">Year: <strong id="year-display">2024</strong></span>
+            <input type="range" id="year-slider" min="2010" max="2024" value="2024" class="timeline-slider">
+        </div>
+        <div class="row">
+            <div class="chart-container" id="timeseries-internet"></div>
+            <div class="chart-container" id="timeseries-space"></div>
+        </div>
+
+        <!-- Level 4: Multi-Country Comparison -->
+        <div class="section-title">🤝 Level 4: Compare Multiple Countries</div>
+        <div class="comparison-controls">
+            <input type="text" id="search-countries" placeholder="Search countries to compare..." class="search-input">
+            <button id="reset-comparison" class="control-btn">Reset Comparison</button>
+        </div>
+        <div id="comparison-panel" class="comparison-panel" style="display: none;">
+            <div id="comparison-cards" class="comparison-cards"></div>
+            <div id="comparison-chart" class="chart-container"></div>
+        </div>
+        <div id="country-selector" class="country-selector" style="display: none;">
+            <div id="country-list" class="country-list"></div>
+        </div>
+
         <!-- Country Info Panel -->
         <div class="info-panel" id="info-panel" style="display: none;">
             <div class="info-header">

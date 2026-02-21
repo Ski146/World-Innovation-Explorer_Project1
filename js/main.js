@@ -64,6 +64,11 @@
         INTERACTIONS.init();
         console.log('✓ Interactions initialized');
 
+        // Initialize Level 4 features
+        console.log('Initializing Level 4 features...');
+        LEVEL4.init();
+        console.log('✓ Level 4 initialized');
+
         console.log('✅ Application ready!');
 
     } catch (error) {

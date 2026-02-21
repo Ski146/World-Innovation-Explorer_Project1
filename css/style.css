@@ -601,6 +601,231 @@ svg {
     }
 }
 
+/* Level 4: Time-Series Animation */
+.timeline-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f0f7ff;
+    border: 1px solid #4A90E2;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-btn {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.timeline-btn:hover {
+    background-color: #357ABD;
+}
+
+.timeline-label {
+    font-weight: 600;
+    color: #2C3E50;
+    min-width: 120px;
+}
+
+.timeline-slider {
+    flex: 1;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #E3F2FD, #4A90E2, #1A4D8F);
+    outline: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.timeline-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4A90E2;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-slider::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #4A90E2;
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Level 4: Multi-Country Comparison */
+.comparison-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 0.75rem;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.country-selector {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.country-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.country-item {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.country-item:hover {
+    background-color: #f0f7ff;
+}
+
+.country-item input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.country-item label {
+    cursor: pointer;
+    flex: 1;
+}
+
+/* Comparison Panel */
+.comparison-panel {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.comparison-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.comparison-card {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.comparison-card:hover {
+    border-color: #4A90E2;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+.comp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #4A90E2;
+    padding-bottom: 0.5rem;
+}
+
+.comp-header h4 {
+    margin: 0;
+    color: #2C3E50;
+    font-size: 1.1rem;
+}
+
+.comp-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #e74c3c;
+    transition: color 0.2s ease;
+}
+
+.comp-close:hover {
+    color: #c0392b;
+}
+
+.comp-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.comp-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.comp-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #4A90E2;
+}
+
+.comp-rank {
+    background-color: #e8f4fd;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #357ABD;
+    min-width: 50px;
+    text-align: right;
+}
+
+.comp-diff {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
 @media (max-width: 480px) {
     .row {
         grid-template-columns: 1fr;
@@ -621,5 +846,26 @@ svg {
 
     .info-panel {
         padding: 1rem;
+    }
+
+    .timeline-controls {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .timeline-slider {
+        width: 100%;
+    }
+
+    .comparison-controls {
+        flex-direction: column;
+    }
+
+    .search-input {
+        min-width: 100%;
+    }
+
+    .comparison-cards {
+        grid-template-columns: 1fr;
     }
 }
