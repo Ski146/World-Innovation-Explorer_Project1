@@ -641,6 +641,7 @@ svg {
     background: linear-gradient(to right, #E3F2FD, #4A90E2, #1A4D8F);
     outline: none;
     -webkit-appearance: none;
+    appearance: none;
     cursor: pointer;
 }
 
