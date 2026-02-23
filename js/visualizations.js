@@ -406,7 +406,7 @@ const VIZ = {
 
     /**
      * Create Choropleth Map - Space Object   */
-   /** createSpaceMap: function(geoData) {
+   createSpaceMap: function(geoData) {
         console.log('Creating Space map with', geoData.features.length, 'features');
         
         const container = document.getElementById('space-map');
@@ -439,7 +439,7 @@ const VIZ = {
 
         const pathGenerator = d3.geoPath().projection(projection);
 
-        // Color scale for space objects - Red gradient (#E74C3C)
+        
         const spaceValues = geoData.features
             .map(f => f.properties.space)
             .filter(v => v !== undefined && v !== null && v > 0);
@@ -524,7 +524,7 @@ const VIZ = {
                     </div>
                 </div>
             </div>
-        `; */
+        `; 
         
         //d3.select('#space-map').append('div').html(legendHtml);
     }
