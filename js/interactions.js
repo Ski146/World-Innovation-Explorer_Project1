@@ -209,33 +209,7 @@ const INTERACTIONS = {
                 </div>
             </div>
 
-            
-
-            <!-- Category -->
-            <div class="profile-section">
-                <h4 class="section-header">🏷️ Category</h4>
-                <div class="info-stat">
-                    <span class="info-label">Internet Category:</span>
-                    <span class="info-value">
-                        ${internet < 33 ? '🔴 Low' : internet <= 66 ? '🟡 Medium' : '🟢 High'}
-                    </span>
-                </div>
-                <div class="info-stat">
-                    <span class="info-label">Space Activity:</span>
-                    <span class="info-value">
-                        ${space > 0 ? '🚀 Active' : '⭕ No Activity'}
-                    </span>
-                </div>
-            </div>
-
-            <!-- Country Code -->
-            <div class="profile-section">
-                <div class="info-stat">
-                    <span class="info-label">Country Code:</span>
-                    <span class="info-value">${code || '--'}</span>
-                </div>
-            </div>
-        `;
+        
 
         panel.style.display = 'block';
     },
