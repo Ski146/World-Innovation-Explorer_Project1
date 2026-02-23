@@ -922,4 +922,7 @@ svg {
     .comparison-cards {
         grid-template-columns: 1fr;
     }
+   .tick text, svg text {
+    fill: #ffffff;
+   }
 }
