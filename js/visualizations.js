@@ -401,7 +401,7 @@ const VIZ = {
             </div>
         `;
         
-        d3.select('#internet-map').append('div').html(legendHtml);
+        //d3.select('#internet-map').append('div').html(legendHtml);
     },
 
     /**
@@ -527,6 +527,6 @@ const VIZ = {
             </div>
         `;
         
-        d3.select('#space-map').append('div').html(legendHtml);
+        //d3.select('#space-map').append('div').html(legendHtml);
     }
 };
