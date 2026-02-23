@@ -283,8 +283,8 @@ const VIZ = {
             return;
         }
         
-        const width = Math.max(container.offsetWidth - 40, 600);
-        const height = 500;
+        const width = Math.max(container.offsetWidth - 40, 900);
+        const height = 600;
         
         console.log('Internet map dimensions:', width, 'x', height);
 
@@ -416,8 +416,8 @@ const VIZ = {
             return;
         }
         
-        const width = Math.max(container.offsetWidth - 40, 600);
-        const height = 500;
+        const width = Math.max(container.offsetWidth - 40, 900);
+        const height = 600;
         
         console.log('Space map dimensions:', width, 'x', height);
 
