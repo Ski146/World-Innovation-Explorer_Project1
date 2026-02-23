@@ -89,7 +89,7 @@ const VIZ = {
             .attr('y', 0 - margin.left)
             .attr('x', 0 - height / 2)
             .attr('dy', '1em')
-            .attr('fill', '#333')
+            .attr('fill', '#ffffff')
             .style('text-anchor', 'middle')
             .text('Number of Countries');
     },
@@ -179,7 +179,7 @@ const VIZ = {
             .attr('y', 0 - margin.left)
             .attr('x', 0 - height / 2)
             .attr('dy', '1em')
-            .attr('fill', '#333')
+            .attr('fill', '#ffffff')
             .style('text-anchor', 'middle')
             .text('Objects Launched');
     },
@@ -254,7 +254,7 @@ const VIZ = {
             .append('text')
             .attr('x', width / 2)
             .attr('y', 35)
-            .attr('fill', '#333')
+            .attr('fill', '#ffffff')
             .style('text-anchor', 'middle')
             .text('Internet Usage (%)');
 
@@ -266,7 +266,7 @@ const VIZ = {
             .attr('y', 0 - margin.left)
             .attr('x', 0 - height / 2)
             .attr('dy', '1em')
-            .attr('fill', '#333')
+            .attr('fill', '#ffffff')
             .style('text-anchor', 'middle')
             .text('Space Objects Launched');
     },
