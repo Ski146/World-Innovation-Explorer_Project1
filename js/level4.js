@@ -204,7 +204,7 @@ const LEVEL4 = {
             .attr('y', 0 - margin.left)
             .attr('x', 0 - height / 2)
             .attr('dy', '1em')
-            .attr('fill', '#333')
+            .attr('fill', '#ffffff')
             .style('text-anchor', 'middle')
             .text('Internet Adoption (%)');
     },
@@ -296,7 +296,7 @@ const LEVEL4 = {
             .attr('y', 0 - margin.left)
             .attr('x', 0 - height / 2)
             .attr('dy', '1em')
-            .attr('fill', '#333')
+            .attr('fill', '#ffffff')
             .style('text-anchor', 'middle')
             .text('Space Objects Launched');
     },
