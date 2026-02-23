@@ -185,7 +185,7 @@ const INTERACTIONS = {
         document.getElementById('info-content').innerHTML = `
             <!-- Primary Metrics -->
             <div class="profile-section">
-                <h4 class="section-header">📊 Primary Metrics</h4>
+                <h4 class="section-header">Primary Metrics</h4>
                 <div class="info-stat">
                     <span class="info-label">Internet Usage:</span>
                     <span class="info-value">${UTILS.formatNumber(internet)}%</span>
@@ -198,7 +198,7 @@ const INTERACTIONS = {
 
             <!-- Rankings -->
             <div class="profile-section">
-                <h4 class="section-header">🏆 Global Rankings</h4>
+                <h4 class="section-header">Global Rankings</h4>
                 <div class="info-stat">
                     <span class="info-label">Internet Rank:</span>
                     <span class="info-value">#${internetRank.rank} of ${internetRank.total} (${internetRank.percentile}th percentile)</span>
@@ -209,30 +209,7 @@ const INTERACTIONS = {
                 </div>
             </div>
 
-            <!-- Comparisons -->
-            <div class="profile-section">
-                <h4 class="section-header">📈 Global Comparison</h4>
-                <div class="info-stat">
-                    <span class="info-label">vs Global Internet Avg:</span>
-                    <span class="info-value" style="color: ${internetDiff > 0 ? '#27ae60' : '#e74c3c'};">
-                        ${internetDiffSign}${internetDiff} pp
-                    </span>
-                </div>
-                <div class="info-stat">
-                    <span class="info-label">vs Global Space Avg:</span>
-                    <span class="info-value">
-                        ${spaceDiff !== 'N/A' ? spaceDiff + '%' : spaceDiff}
-                    </span>
-                </div>
-                <div class="info-stat">
-                    <span class="info-label">Global Internet Avg:</span>
-                    <span class="info-value">${globals.avgInternet}%</span>
-                </div>
-                <div class="info-stat">
-                    <span class="info-label">Global Space Avg:</span>
-                    <span class="info-value">${globals.avgSpace}</span>
-                </div>
-            </div>
+            
 
             <!-- Category -->
             <div class="profile-section">
