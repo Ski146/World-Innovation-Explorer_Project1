@@ -146,7 +146,7 @@ const LEVEL4 = {
 
         d3.select('#timeseries-internet').insert('h3', 'svg')
             .attr('class', 'chart-title')
-            .text(`📊 Internet Adoption Trends (Top 15) - Year ${year}`);
+            .text(` Internet Adoption Trends (Top 15) - Year ${year}`);
 
         const g = svg.append('g')
             .attr('transform', `translate(${margin.left},${margin.top})`);
@@ -238,7 +238,7 @@ const LEVEL4 = {
 
         d3.select('#timeseries-space').insert('h3', 'svg')
             .attr('class', 'chart-title')
-            .text(`🚀 Space Objects Trends (Top 15) - Year ${year}`);
+            .text(` Space Objects Trends (Top 15) - Year ${year}`);
 
         const g = svg.append('g')
             .attr('transform', `translate(${margin.left},${margin.top})`);
