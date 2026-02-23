@@ -381,7 +381,25 @@ const VIZ = {
         console.log('Internet map: Created', pathCount, 'paths with data');
 
         // Add legend
-    
+        const legendHtml = `
+            <div class="legend" style="margin-top: 1rem; padding: 0.5rem; background: #1e293b; border: 1px solid #334155; border-radius: 4px; color: #ffffff;">
+                <strong style="display: block; margin-bottom: 0.5rem; font-size: 14px;">Internet Usage (%)</strong>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <div style="width: 20px; height: 20px; background-color: #E3F2FD; border: 1px solid #999;"></div>
+                        <span style="font-size: 12px;">${Math.round(minInternetValue)}%</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <div style="width: 20px; height: 20px; background-color: #4A90E2; border: 1px solid #999;"></div>
+                        <span style="font-size: 12px;">${Math.round(meanInternetValue)}%</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <div style="width: 20px; height: 20px; background-color: #1A4D8F; border: 1px solid #999;"></div>
+                        <span style="font-size: 12px;">${Math.round(maxInternetValue)}%</span>
+                    </div>
+                </div>
+            </div>
+        `;
         
         d3.select('#internet-map').append('div').html(legendHtml);
     },
