@@ -48,7 +48,7 @@ body {
     line-height: 1.6;
 }
 
-/* ── Header ─────────────────────────────── */
+/* Header */
 .header {
     background: var(--surface-1);
     background-image:
@@ -85,14 +85,14 @@ body {
     color: var(--neutral-dark);
 }
 
-/* ── Container & Layout ─────────────────── */
+/* Container & Layout*/
 .container {
     max-width: 1600px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 
-/* ── Section Titles ─────────────────────── */
+/* Section Titles*/
 .section-title {
     font-size: 1.3rem;
     font-weight: 600;
@@ -107,7 +107,7 @@ body {
     display: block;
 }
 
-/* ── Controls Panel ─────────────────────── */
+/*Controls Panel*/
 .controls-panel {
     background: var(--surface-2);
     border: 1px solid var(--border-subtle);
@@ -167,7 +167,7 @@ body {
     box-shadow: var(--glow-internet);
 }
 
-/* ── Stats Panel ─────────────────────────── */
+/* Stats Panel*/
 .stats-panel {
     display: flex;
     gap: 1rem;
@@ -198,7 +198,7 @@ body {
     color: var(--primary-internet);
 }
 
-/* ── Chart Container ─────────────────────── */
+/*Chart Container */
 .row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -251,7 +251,7 @@ body {
     padding-bottom: 0.5rem;
 }
 
-/* ── SVG & D3 ────────────────────────────── */
+/*SVG & D3*/
 svg {
     font-family: 'Segoe UI', sans-serif;
 }
@@ -277,7 +277,7 @@ svg {
     opacity: 0.6;
 }
 
-/* ── Bar Chart ───────────────────────────── */
+/*Bar Chart*/
 .bar {
     fill: var(--primary-internet);
     transition: fill 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
@@ -309,7 +309,7 @@ svg {
     opacity: 0.15;
 }
 
-/* ── Info Panel ──────────────────────────── */
+/*Info Panel*/
 .info-panel {
     position: fixed;
     right: 20px;
@@ -419,7 +419,7 @@ svg {
     color: var(--primary-internet);
 }
 
-/* ── Profile Sections ────────────────────── */
+/* Profile Sections*/
 .profile-section {
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
@@ -451,7 +451,7 @@ svg {
     margin-bottom: 0;
 }
 
-/* ── Scatter Plot ─────────────────────────── */
+/*Scatter Plot */
 .dot {
     fill: var(--primary-internet);
     stroke: var(--surface-2);
@@ -490,7 +490,7 @@ svg {
     opacity: 1;
 }
 
-/* ── Map ─────────────────────────────────── */
+/* Map*/
 .country {
     fill: var(--surface-3);
     stroke: var(--surface-1);
@@ -530,7 +530,7 @@ svg {
     opacity: 0.08;
 }
 
-/* ── Legend ──────────────────────────────── */
+/*Legend*/
 .legend {
     margin-top: 1.5rem;
     padding-top: 1rem;
@@ -555,7 +555,7 @@ svg {
     border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* ── Tooltip ─────────────────────────────── */
+/*Tooltip */
 .tooltip {
     position: fixed;
     background: var(--surface-2);
@@ -586,7 +586,7 @@ svg {
     color: #94A3B8;
 }
 
-/* ── Timeline Controls ───────────────────── */
+/*Timeline Controls*/
 .timeline-controls {
     display: flex;
     align-items: center;
@@ -653,7 +653,7 @@ svg {
     box-shadow: 0 2px 8px rgba(56, 189, 248, 0.4);
 }
 
-/* ── Comparison Controls ─────────────────── */
+/*Comparison Controls*/
 .comparison-controls {
     display: flex;
     gap: 1rem;
@@ -730,7 +730,7 @@ svg {
     flex: 1;
 }
 
-/* ── Comparison Panel ────────────────────── */
+/* Comparison Panel*/
 .comparison-panel {
     background: var(--surface-2);
     border: 1px solid var(--border-subtle);
@@ -822,7 +822,7 @@ svg {
     font-size: 1rem;
 }
 
-/* ── Responsive ──────────────────────────── */
+/* Responsive*/
 @media (max-width: 1200px) {
     .row {
         grid-template-columns: 1fr;
