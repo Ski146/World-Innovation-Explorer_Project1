@@ -77,7 +77,7 @@ const VIZ = {
             .append('text')
             .attr('x', width / 2)
             .attr('y', 35)
-            .attr('fill', '#333')
+            .attr('fill', '#ffffff')
             .style('text-anchor', 'middle')
             .text('Internet Usage (%)');
 
@@ -381,25 +381,7 @@ const VIZ = {
         console.log('Internet map: Created', pathCount, 'paths with data');
 
         // Add legend
-        const legendHtml = `
-            <div class="legend" style="margin-top: 1rem; padding: 0.5rem; background: white; border: 1px solid #ddd; border-radius: 4px;">
-                <strong style="display: block; margin-bottom: 0.5rem; font-size: 14px;">Internet Usage (%)</strong>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <div style="width: 20px; height: 20px; background-color: #E3F2FD; border: 1px solid #999;"></div>
-                        <span style="font-size: 12px;">${Math.round(minInternetValue)}%</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <div style="width: 20px; height: 20px; background-color: #4A90E2; border: 1px solid #999;"></div>
-                        <span style="font-size: 12px;">${Math.round(meanInternetValue)}%</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <div style="width: 20px; height: 20px; background-color: #1A4D8F; border: 1px solid #999;"></div>
-                        <span style="font-size: 12px;">${Math.round(maxInternetValue)}%</span>
-                    </div>
-                </div>
-            </div>
-        `;
+    
         
         d3.select('#internet-map').append('div').html(legendHtml);
     },
@@ -509,23 +491,7 @@ const VIZ = {
 
         console.log('Space map: Created', pathCount, 'paths with data');
 
-        // Add legend
-        const maxSpaceValue = d3.max(spaceValues) || 100;
-        const legendHtml = `
-            <div class="legend" style="margin-top: 1rem; padding: 0.5rem; background: white; border: 1px solid #ddd; border-radius: 4px;">
-                <strong style="display: block; margin-bottom: 0.5rem; font-size: 14px;">Objects Launched</strong>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <div style="width: 20px; height: 20px; background-color: #FFEBEE; border: 1px solid #999;"></div>
-                        <span style="font-size: 12px;">Low</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <div style="width: 20px; height: 20px; background-color: #E74C3C; border: 1px solid #999;"></div>
-                        <span style="font-size: 12px;">High (${Math.round(maxSpaceValue)})</span>
-                    </div>
-                </div>
-            </div>
-        `;
+        
         
         d3.select('#space-map').append('div').html(legendHtml);
     }
