@@ -925,4 +925,7 @@ svg {
    .tick text, svg text {
     fill: #ffffff;
    }
+   .axis text {
+    fill: #ffffff;
+   }
 }
