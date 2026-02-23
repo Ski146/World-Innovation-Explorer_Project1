@@ -405,9 +405,8 @@ const VIZ = {
     },
 
     /**
-     * Create Choropleth Map - Space Objects
-     */
-    createSpaceMap: function(geoData) {
+     * Create Choropleth Map - Space Object   */
+   /** createSpaceMap: function(geoData) {
         console.log('Creating Space map with', geoData.features.length, 'features');
         
         const container = document.getElementById('space-map');
@@ -525,7 +524,7 @@ const VIZ = {
                     </div>
                 </div>
             </div>
-        `;
+        `; */
         
         //d3.select('#space-map').append('div').html(legendHtml);
     }
