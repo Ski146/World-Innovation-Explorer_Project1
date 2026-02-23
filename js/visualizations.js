@@ -24,7 +24,7 @@ const VIZ = {
         // Add title
         d3.select('#internet-dist').insert('h2', 'svg')
             .attr('class', 'chart-title')
-            .text('🌐 Internet Usage Distribution');
+            .text('Internet Usage Distribution');
 
         const g = svg.append('g')
             .attr('transform', `translate(${margin.left},${margin.top})`);
@@ -115,7 +115,7 @@ const VIZ = {
         // Add title
         d3.select('#space-dist').insert('h2', 'svg')
             .attr('class', 'chart-title')
-            .text('🚀 Top 20 Countries - Space Objects');
+            .text('Top 20 Countries - Space Objects');
 
         const g = svg.append('g')
             .attr('transform', `translate(${margin.left},${margin.top})`);
@@ -199,7 +199,7 @@ const VIZ = {
         // Add title
         d3.select('#scatter-plot').insert('h2', 'svg')
             .attr('class', 'chart-title')
-            .text('🔗 Internet Usage vs Space Objects Correlation');
+            .text('Internet Usage vs Space Objects Correlation');
 
         const g = svg.append('g')
             .attr('transform', `translate(${margin.left},${margin.top})`);
@@ -298,7 +298,7 @@ const VIZ = {
         // Add title
         d3.select('#internet-map').insert('h2', 'svg')
             .attr('class', 'chart-title')
-            .text('🌐 Internet Usage by Country');
+            .text('Internet Usage by Country');
 
         // Projection and path
         const projection = d3.geoMercator()
@@ -431,7 +431,7 @@ const VIZ = {
         // Add title
         d3.select('#space-map').insert('h2', 'svg')
             .attr('class', 'chart-title')
-            .text('🚀 Space Objects Launched by Country');
+            .text('Space Objects Launched by Country');
 
         // Projection and path
         const projection = d3.geoMercator()
