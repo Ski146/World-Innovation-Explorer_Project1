@@ -182,7 +182,7 @@ const INTERACTIONS = {
         document.getElementById('info-country-name').textContent = name;
 
         // Enhanced content with Level 3 details
-        document.getElementById('info-content').innerHTML = '
+        document.getElementById('info-content').innerHTML = `
             <!-- Primary Metrics -->
             <div class="profile-section">
                 <h4 class="section-header">Primary Metrics</h4>
@@ -207,7 +207,8 @@ const INTERACTIONS = {
                     <span class="info-label">Space Rank:</span>
                     <span class="info-value">${space > 0 ? `#${spaceRank.rank} of ${spaceRank.total}` : 'No space activity'}</span>
                 </div>
-            </div> ';
+            </div> 
+        `;
 
         
 
