@@ -233,7 +233,8 @@ body {
 }
 
 .chart-container.map-container {
-    min-height: 62rem;
+    min-height: 500px;
+    width: 100%;
     font-weight: 600;
     margin-bottom: 1.5rem;
     color: var(--neutral-dark);
