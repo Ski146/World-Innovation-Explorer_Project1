@@ -23,13 +23,7 @@
         // Debug: Check merged data
         const countriesWithData = mergedGeoData.features.filter(f => f.properties.internet !== undefined).length;
         console.log(`Debug: ${countriesWithData}/${mergedGeoData.features.length} countries have internet data`);
-        
-        // Display debug info on page
-        const debugInfo = document.createElement('div');
-        debugInfo.style.cssText = 'position: fixed; top: 10px; right: 10px; background: white; border: 2px solid #4A90E2; padding: 10px; z-index: 9999; max-width: 300px; font-family: monospace; font-size: 11px; max-height: 200px; overflow: auto;';
-        debugInfo.innerHTML = `<strong>Debug Info:</strong><br>Features with internet data: ${countriesWithData}/${mergedGeoData.features.length}`;
-        document.body.appendChild(debugInfo);
-        
+                
         if (countriesWithData < 50) {
             console.warn('Low merge success rate. Sample features:');
             for (let i = 0; i < Math.min(5, mergedGeoData.features.length); i++) {
@@ -44,32 +38,32 @@
 
         // Create all visualizations
         VIZ.createInternetDistribution(DATA.countries);
-        console.log('✓ Internet distribution created');
+        console.log(' Internet distribution created');
         
         VIZ.createSpaceDistribution(DATA.countries);
-        console.log('✓ Space distribution created');
+        console.log(' Space distribution created');
         
         VIZ.createScatterPlot(DATA.countries);
-        console.log('✓ Scatter plot created');
+        console.log(' Scatter plot created');
         
         console.log('Creating maps...');
         VIZ.createInternetMap(mergedGeoData);
-        console.log('✓ Internet map created');
+        console.log(' Internet map created');
         
         VIZ.createSpaceMap(mergedGeoData);
-        console.log('✓ Space map created');
+        console.log(' Space map created');
 
         // Initialize interactive features
         console.log('Initializing interactive features...');
         INTERACTIONS.init();
-        console.log('✓ Interactions initialized');
+        console.log(' Interactions initialized');
 
         // Initialize Level 4 features
         console.log('Initializing Level 4 features...');
         LEVEL4.init();
-        console.log('✓ Level 4 initialized');
+        console.log(' Level 4 initialized');
 
-        console.log('✅ Application ready!');
+        console.log(' Application ready!');
 
     } catch (error) {
         console.error('Error initializing application:', error);
